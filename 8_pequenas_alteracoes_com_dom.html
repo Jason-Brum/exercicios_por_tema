@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pequenas alterações com DOM</h1>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi, quo quas possimus, repellendus dolore aliquid est totam impedit minus suscipit eaque quibusdam omnis libero saepe labore. Amet, vel magnam.</p>
+
+        <p id="pImp"> Este é um parágrafo importante e sofrerá uma alteração pelo DOM.</p>
+    </div>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, odit sint eveniet sed debitis atque eaque doloremque adipisci ducimus aspernatur nulla saepe id voluptatum, magnam reprehenderit rem voluptatem repellat delectus.</p>
+    </div>
+
+    <h2>Clique aqui!</h2>
+
+    <script>
+
+
+        var mov = window.document.getElementsByTagName('h2') [0]
+        mov.addEventListener('click', clicar)
+        mov.addEventListener('mouseenter', entrar)
+        mov.addEventListener('mouseout', sair)
+
+        function clicar() {
+            mov.innerText = 'Clicou!'
+            mov.style.background = 'black'
+            mov.style.color = 'yellow'
+           
+        }
+        function entrar() {
+            mov.innerText = 'Entrou'
+            mov.style.background = 'pink'
+        }
+        function sair(){
+            mov.innerText = 'Volta aqui!'
+            mov.style.color = 'green'
+        }
+
+        let passar = window.document.getElementById('pImp')
+        passar.addEventListener('mouseenter', entrar2)
+
+        function entrar2(){
+            passar.style.background = 'purple'
+            passar.style.color = 'white'
+            passar.style.fontSize = '30px'
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font: normal 22px arial; 
+            color: blue
+        }
+    </style>
+</head>
+<body>
+    <h1>Solicitar o nome e informar a quantidade de letras e como escreve em maiúsculas e em minúsculas</h1>
+<div>
+        <script>
+            
+            let nome =  prompt("Qual o seu nome? ")
+            document.write(`Olá ${nome}, seu nome tem <strong>${nome.length} letras</strong> <br/>`)
+            document.write(`Seu nome em letras maiúsculas é: <strong>${nome.toUpperCase()}</strong> <br/>`)
+            document.write(`Seu nome em letras minúsculas é: <strong>${nome.toLowerCase()}</strong>`)
+            
+            </script>
+
+</div>
+    
+    
+</body>
+</html>

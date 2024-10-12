@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Informando a cidade e abrindo na Wikpédia</h1>
+
+
+    <script>
+        // Solicita a cidade do usuário
+let cidade = prompt("Digite o nome da sua cidade:");
+
+// Verifica se o usuário inseriu algum valor
+if (cidade) {
+  // Remove possíveis espaços extras no início ou fim do nome
+  cidade = cidade.trim();
+  
+  // Substitui espaços por underscores para o formato correto da URL do Wikipedia
+  let urlCidade = `https://pt.wikipedia.org/wiki/${cidade.replace(/ /g, "_")}`;
+  
+  // Abre o verbete da cidade na Wikipedia
+  window.open(urlCidade, "_blank");
+} else {
+  alert("Por favor, insira o nome de uma cidade.");
+}
+
+
+    </script>
+    
+</body>
+</html>
